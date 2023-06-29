@@ -17,9 +17,12 @@ function submitForm() {
 }
 
 
-document.querySelector('.hamburger-menu').addEventListener('click', function() {
-    document.querySelector('.navbar').classList.toggle('show-nav');
+$(document).ready(function () {
+  $(".menu__icon").click(function () {
+    $("body").toggleClass("menu_shown");
+  });
 });
+
 
 // Add class to join button to trigger the animation
 document.querySelector('.join-button').classList.add('join-button-animate');
