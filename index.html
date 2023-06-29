@@ -11,17 +11,28 @@
 
 <body>
     <header>
-        <h1>Radiant Security Forces</h1>
+        <div class="header-content">
+            <h1>Radiant Security Forces</h1>
+            <div class="buttons">
+                <a href="#join" class="join-button">Join</a>
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
-
-    <nav>
-        <ul>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#team">Teams</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
 
     <section id="about">
         <h2>About Us</h2>
@@ -32,48 +43,48 @@
         <h2>Our Services</h2>
         <div class="categories">
             <div class="category">
-                <img src="network-security.jpg" alt="Network Security">
+                <img src="imgs/network-security.jpg" alt="Network Security">
                 <h3>Network Security</h3>
             </div>
             <div class="category">
-                <img src="penetration-testing.jpg" alt="Penetration Testing">
+                <img src="imgs/penetration-testing.jpg" alt="Penetration Testing">
                 <h3>Penetration Testing</h3>
             </div>
             <div class="category">
-                <img src="security-audits.jpg" alt="Security Audits">
+                <img src="imgs/security-audits.jpg" alt="Security Audits">
                 <h3>Security Audits</h3>
             </div>
             <div class="category">
-                <img src="incident-response.jpg" alt="Incident Response">
+                <img src="imgs/incident-response.jpg" alt="Incident Response">
                 <h3>Incident Response</h3>
             </div>
             <div class="category">
-                <img src="encryption-services.jpg" alt="Encryption Services">
+                <img src="imgs/encryption-services.jpg" alt="Encryption Services">
                 <h3>Encryption Services</h3>
             </div>
         </div>
     </section>
 
     <section id="team">
-        <h2>Our Team</h2>
-        <div class="member">
-            <img src="member2.jpg" alt="Team Member 2">
-            <h3>ryfor</h3>
-            <p>Founder</p>
+        <h2>Our Services</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="imgs/profile1.jpg" alt="ryfor">
+                <h3>Ryfor - Founder</h3>
+            </div>
+            <div class="category">
+                <img src="imgs/profile2.jpg" alt="ALPHA">
+                <h3>Alpha - Co-founder</h3>
+            </div>
+            <div class="category">
+                <img src="imgs/Developer1.jpg" alt="Developer1">
+                <h3>[{Username}]</h3>
+            </div>
+            <div class="category">
+                <img src="imgs/Developer2.jpg" alt="Developer2">
+                <h3>KindOfAFailure</h3>
+            </div>
         </div>
-
-        <div class="member">
-            <img src="member1.jpg" alt="Team Member 1">
-            <h3>a1pha_official</h3>
-            <p>Co-Founder</p>
-        </div>
-
-        <div class="member">
-            <img src="member3.jpg" alt="Team Member 3">
-            <h3>someone</h3>
-            <p>developer</p>
-        </div>
-
     </section>
 
     <footer>
@@ -89,6 +100,9 @@
         gsap.from("#services .category", { duration: 1, delay: 1.5, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out" });
         gsap.from("#team .member", { duration: 1, delay: 2, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out" });
         gsap.from("#contact form", { duration: 1, delay: 2.5, y: 50, opacity: 0, ease: "power2.out" });
+        // GSAP animation for join button
+        gsap.from(".join-button", { duration: 1, delay: 2.5, y: 50, opacity: 0, ease: "power2.out" });
+
 
         // Form Submission
         function submitForm() {

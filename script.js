@@ -16,6 +16,15 @@ function submitForm() {
     alert("Message submitted successfully!");
 }
 
+
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('show-nav');
+});
+
+// Add class to join button to trigger the animation
+document.querySelector('.join-button').classList.add('join-button-animate');
+
+
 // Simulate the loading progress
 let progressBar = document.querySelector('.progress-bar');
 let errorMessage = document.querySelector('#error-message');
