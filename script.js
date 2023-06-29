@@ -17,12 +17,11 @@ function submitForm() {
 }
 
 
-$(document).ready(function () {
-  $(".menu__icon").click(function () {
-    $("body").toggleClass("menu_shown");
+document.ready(function () {
+  document.getElementByClassName("menu__icon").click(function () {
+    $("body").classList.toggle("menu_shown");
   });
 });
-
 
 // Add class to join button to trigger the animation
 document.querySelector('.join-button').classList.add('join-button-animate');
