@@ -17,16 +17,36 @@ function submitForm() {
 }
 
 
-document.ready(function () {
-  document.getElementByClassName("menu__icon").click(function () {
-    $("body").classList.toggle("menu_shown");
-  });
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('show-nav');
 });
 
 // Add class to join button to trigger the animation
 document.querySelector('.join-button').classList.add('join-button-animate');
 
 
+// Simulate the loading progress
+let progressBar = document.querySelector('.progress-bar');
+let errorMessage = document.querySelector('#error-message');
+let loadingOverlay = document.querySelector('.loading-overlay');
+let pageContent = document.querySelector('.page-content');
+
+let progress = 0;
+let interval = setInterval(increaseProgress, 50);
+
+function increaseProgress() {
+  progress += 2;
+  progressBar.style.width = progress + '%';
+
+  if (progress >= 50) {
+    clearInterval(interval);
+    showErrorMessages();
+  } else if (progress >= 100) {
+    clearInterval(interval);
+    loadingOverlay.style.display = 'none';
+    pageContent.style.display = 'block';
+  }
+}
 
 function showErrorMessages() {
   let messages = [
@@ -56,5 +76,6 @@ function showErrorMessages() {
     }
   }
 }
+
 
 
