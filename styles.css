@@ -200,14 +200,15 @@ footer {
 .join-button {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #fff;
-    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 70px;
     font-weight: 600;
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .join-button::after {
@@ -273,3 +274,40 @@ footer {
 .hamburger-menu.open span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -8px);
 }
+
+
+
+.learn-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid rgb(255, 44, 44);
+    border-radius: 70px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.learn-button::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    width: 110%;
+    height: 150%;
+    background-color: rgb(192, 231, 255);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.learn-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+}
+  
+
+
